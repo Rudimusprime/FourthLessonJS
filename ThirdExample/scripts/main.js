@@ -18,6 +18,21 @@ const changeColor = (e) => {
         blue -= 5;
         document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
     }
+
+    switch (e.keyCode) {
+        case 38:
+            red += 5;
+            green += 5;
+            blue += 5;
+            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            break;
+        case 40:
+            red -= 5;
+            green -= 5;
+            blue -= 5;
+            document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            break;
+    }
 }
 
 window.addEventListener('keydown', changeColor)
